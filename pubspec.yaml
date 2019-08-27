@@ -25,6 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   carousel_slider: ^1.3.0
   flutter_calendar_carousel: ^1.3.18
+  sliding_up_panel: ^0.3.4
+  video_player: ^0.10.1+7
+  chewie: ^0.9.7
 
 dev_dependencies:
   flutter_test:

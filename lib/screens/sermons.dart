@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_church_app_ui/screens/sermon_details.dart';
 import 'package:flutter_church_app_ui/widgets/appbar.dart';
 
 class SermonsPage extends StatefulWidget {
@@ -7,6 +9,46 @@ class SermonsPage extends StatefulWidget {
 }
 
 class _SermonsPageState extends State<SermonsPage> {
+  // This Map data should come from the database
+  final List<Map<String, String>> _sermons = [
+    {
+      'title': 'All or Nothing',
+      'by': 'Akora Ing. DKB',
+      'imgUrl': 'someUrl',
+      'mediaUrl': 'someAudioOrVideoUrl',
+    },
+    {
+      'title': 'All or Nothing',
+      'by': 'Akora Ing. DKB',
+      'imgUrl': 'someUrl',
+      'mediaUrl': 'someAudioOrVideoUrl',
+    },
+    {
+      'title': 'All or Nothing',
+      'by': 'Akora Ing. DKB',
+      'imgUrl': 'someUrl',
+      'mediaUrl': 'someAudioOrVideoUrl',
+    },
+    {
+      'title': 'All or Nothing',
+      'by': 'Akora Ing. DKB',
+      'imgUrl': 'someUrl',
+      'mediaUrl': 'someAudioOrVideoUrl',
+    },
+    {
+      'title': 'All or Nothing',
+      'by': 'Akora Ing. DKB',
+      'imgUrl': 'someUrl',
+      'mediaUrl': 'someAudioOrVideoUrl',
+    },
+    {
+      'title': 'All or Nothing',
+      'by': 'Akora Ing. DKB',
+      'imgUrl': 'someUrl',
+      'mediaUrl': 'someAudioOrVideoUrl',
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +58,7 @@ class _SermonsPageState extends State<SermonsPage> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          // A Header for the page
           Center(
             child: Container(
               padding: EdgeInsets.only(top: 16),
@@ -42,16 +85,17 @@ class _SermonsPageState extends State<SermonsPage> {
               ),
             ),
           ),
-          Expanded(child: _sermonsList(context)),
+          // List of Sermons
+          Expanded(child: _sermonsList(context, _sermons)),
         ],
       ),
     );
   }
 
-  Widget _sermonsList(BuildContext context) {
+  Widget _sermonsList(BuildContext context, List<Map<String, String>> sermons) {
     return ListView.builder(
       scrollDirection: Axis.vertical,
-      itemCount: 6,
+      itemCount: sermons.length,
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {
         return Container(
@@ -60,6 +104,7 @@ class _SermonsPageState extends State<SermonsPage> {
             overflow: Overflow.visible,
             alignment: Alignment.bottomCenter,
             children: <Widget>[
+              // Sermon Thumbnail
               Material(
                 type: MaterialType.card,
                 elevation: 0,
@@ -69,6 +114,7 @@ class _SermonsPageState extends State<SermonsPage> {
                   child: Center(
                     child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
+                      // This image should be replaced by the thumbnail url
                       child: Image.asset(
                         'assets/images/test_image.jpg',
                         fit: BoxFit.fill,
@@ -79,6 +125,7 @@ class _SermonsPageState extends State<SermonsPage> {
                   ),
                 ),
               ),
+              // Row of Buttons for Play and Favorite
               Positioned(
                 bottom: -40,
                 child: Container(
@@ -104,12 +151,12 @@ class _SermonsPageState extends State<SermonsPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            'All Or Nothing',
+                            sermons[index]['title'],
                             style: TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.w600),
                           ),
                           SizedBox(height: 5),
-                          Text('By: DKB'),
+                          Text('By: ${sermons[index]['title']}'),
                         ],
                       ),
                       Row(
@@ -120,12 +167,19 @@ class _SermonsPageState extends State<SermonsPage> {
                             child: Icon(Icons.star, color: Colors.white),
                           ),
                           SizedBox(width: 10),
-                          CircleAvatar(
-                            backgroundColor: Colors.indigo,
-                            radius: 18,
-                            child: Icon(
-                              Icons.play_arrow,
-                              color: Colors.white,
+                          InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(CupertinoPageRoute(
+                                  builder: (_) =>
+                                      SermonDetails(sermons[index])));
+                            },
+                            child: CircleAvatar(
+                              backgroundColor: Colors.indigo,
+                              radius: 18,
+                              child: Icon(
+                                Icons.play_arrow,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ],

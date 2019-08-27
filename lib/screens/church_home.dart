@@ -8,61 +8,61 @@ class ChurchHome extends StatelessWidget {
       'name': 'CONNECT',
       'image': 'assets/images/connect.png',
       'selected': true,
-      'pushTo': '/connect',
+      'pushTo': 'CONNECT',
     },
     {
       'name': 'EVENTS',
       'image': 'assets/images/event.png',
       'selected': false,
-      'pushTo': '/events',
+      'pushTo': 'EVENTS',
     },
     {
       'name': 'SERMONS',
       'image': 'assets/images/sermons.png',
       'selected': false,
-      'pushTo': '/sermons',
+      'pushTo': 'SERMONS',
     },
     {
       'name': 'CHECK-IN',
       'image': 'assets/images/checkin.png',
       'selected': false,
-      'pushTo': '/checkin',
+      'pushTo': 'CHECKIN',
     },
     {
       'name': 'TESTIMONIALS',
       'image': 'assets/images/testimonials.png',
       'selected': false,
-      'pushTo': '/testimonials',
+      'pushTo': 'TESTIMONIALS',
     },
     {
       'name': 'ANNOUNCEMENTS',
       'image': 'assets/images/announcement.png',
       'selected': false,
-      'pushTo': '/announcements',
+      'pushTo': 'ANNOUNCEMENT',
     },
     {
       'name': 'GIVE',
       'image': 'assets/images/give.png',
       'selected': false,
-      'pushTo': '/give',
+      'pushTo': 'GIVE',
     },
     {
       'name': 'WEBSITE',
       'image': 'assets/images/website.png',
       'selected': false,
-      'pushTo': '/website',
+      'pushTo': 'WEBSITE',
     },
     {
       'name': 'PROGRAMME SHEET',
       'image': 'assets/images/program.png',
       'selected': false,
-      'pushTo': '/programmes',
+      'pushTo': 'PROGRAMMES',
     },
     {
       'name': 'SOCIAL MEDIA',
       'image': 'assets/images/social.png',
       'selected': false,
-      'pushTo': '/social',
+      'pushTo': 'SOCIAL',
     },
   ];
 
@@ -91,7 +91,7 @@ class ChurchHome extends StatelessWidget {
         return InkWell(
           splashColor: Colors.grey[350],
           onTap: () {
-            Navigator.of(context).pushNamed(menuList[index]['pushTo']);
+            Navigator.pushNamed(context, menuList[index]['pushTo']);
           },
           child: Card(
             elevation: 1,

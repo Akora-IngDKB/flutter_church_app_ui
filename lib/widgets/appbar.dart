@@ -27,8 +27,8 @@ Widget MyAppBar(BuildContext context, String title) {
           color: Colors.white,
         ),
         onPressed: () {
-          Navigator.of(context)
-              .push(CupertinoPageRoute(builder: (_) => MainScreen()));
+          Navigator.of(context).pushReplacement(
+              CupertinoPageRoute(builder: (_) => MainScreen()));
         },
       )
     ],

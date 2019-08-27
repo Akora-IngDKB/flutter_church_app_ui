@@ -3,7 +3,6 @@ import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart'
     show CalendarCarousel;
 import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/classes/event_list.dart';
-import 'package:intl/intl.dart' show DateFormat;
 
 class EventCalender extends StatelessWidget {
   @override
@@ -36,9 +35,8 @@ class Calender extends StatefulWidget {
 }
 
 class _CalenderState extends State<Calender> {
-  DateTime _currentDate = DateTime(2019, 2, 3);
+  DateTime _currentDate = DateTime.now();
   DateTime _currentDate2 = DateTime.now();
-  String _currentMonth = '';
 //  List<DateTime> _markedDate = [DateTime(2018, 9, 20), DateTime(2018, 10, 11)];
   static Widget _eventIcon = new Container(
     decoration: new BoxDecoration(

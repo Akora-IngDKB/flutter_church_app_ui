@@ -29,7 +29,6 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final placeholder = Container(color: Colors.grey);
     //Auto playing carousel
     final CarouselSlider autoPlayDemo = CarouselSlider(
       viewportFraction: 0.9,
