@@ -12,9 +12,9 @@ Lookup the original work on [Beehance](https://www.behance.net/gallery/67216667/
         <td>Menu Screen</td>
     </tr>
     <tr>
-        <td><img src="shots/main_2.jpg" width=270 height=480></td>
-        <td><img src="shots/main.jpg" width=270 height=480></td>
-        <td><img src="shots/menu.jpg" width=270 height=480></td>
+        <td><img src="shots/main_2.jpg" width=270 height=600></td>
+        <td><img src="shots/main.jpg" width=270 height=600></td>
+        <td><img src="shots/menu.jpg" width=270 height=600></td>
     </tr>
     <tr>
         <td>Events Page</td>
@@ -22,9 +22,9 @@ Lookup the original work on [Beehance](https://www.behance.net/gallery/67216667/
         <td>Testimoials Page</td>
     </tr>
     <tr>
-        <td><img src="shots/event.jpg" width=270 height=480></td>
-        <td><img src="shots/sermon.jpg" width=270 height=480></td>
-        <td><img src="shots/testi.jpg" width=270 height=480></td>
+        <td><img src="shots/event.jpg" width=270 height=600></td>
+        <td><img src="shots/sermon.jpg" width=270 height=600></td>
+        <td><img src="shots/testi.jpg" width=270 height=600></td>
     </tr>
 </table>
 
