@@ -1,6 +1,6 @@
 # Church App UI made with Flutter
 
-A church app UI made with Flutter.
+A church app UI made with Flutter.  
 Lookup the original work on [Beehance](https://www.behance.net/gallery/67216667/Church-Nexus-App-UI-Design)
 
 #### Concept UI
@@ -28,8 +28,8 @@ Lookup the original work on [Beehance](https://www.behance.net/gallery/67216667/
     </tr>
 </table>
 
-Made with :heart_eyes: by [Akora-IngDKB](https://github.com/Akora-IngDKB)
-Please show some :heart: by giving this repo as :star: as I will be updating it with time.
+Made with :heart_eyes: by [Akora-IngDKB](https://github.com/Akora-IngDKB).  
+Please show some :heart: by giving this repo as :star: as I will be updating it with time.  
 
 ### Getting Started
 
